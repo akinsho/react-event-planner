@@ -1,4 +1,4 @@
-const eventsReducer = (state = [{ id:1, date:'2017-04-01'}], action) => {
+const eventsReducer = (state = [], action) => {
 
   switch (action.type) {
     case 'ADD_EVENT':
