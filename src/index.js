@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
+
 import rootReducer from './reducers/index.js';
-
 import App from './components/app.js';
+import './index.css';
 
-// let store = createStore(rootReducer);
+
+const Wrapper = styled.div`
+  height: 100%;
+  border: solid 1px red;
+`
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(

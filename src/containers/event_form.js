@@ -9,7 +9,11 @@ import Button from '../components/button.js';
 import * as actions from '../actions/index.js';
 
 const Form = styled.form`
-border: solid 1px black;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: rgb(0, 150, 136);
 `;
 
 // console.log(addEvent);
@@ -35,7 +39,7 @@ class EventsForm extends Component {
     if (!this.state.eventName || !this.state.eventDate) {
       return;
     }
-    
+
     this.props.addEvent({name:this.state.eventName,date:this.state.eventDate});
 
     this.setState({
@@ -56,7 +60,7 @@ class EventsForm extends Component {
           eventDate={this.state.eventDate}
           handleChange={this.handleEventInput}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">+</Button>
       </Form>
       );
   }

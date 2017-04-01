@@ -56,7 +56,7 @@ class Calender extends Component {
 
                   let dayOfMonth = (dayIdx + 1) + weekIdx * 7;
                   let eventsToday = this.props.events.filter(event => {
-                    return Number(event.date.slice(-2)) === dayOfMonth;                    
+                    return Number(event.date.slice(-2)) === dayOfMonth;
                   });
                   return (
                     <Td key={uuid()}>

@@ -1,8 +1,9 @@
 import React from 'react';
+import Input from './input.js';
 
 const EventNameInput = (props) => {
   return (
-    <input
+    <Input
       type="text"
       id="eventName"
       value={props.eventName}
