@@ -5,7 +5,7 @@ const EventDateInput = (props) => {
     <input
       type="date"
       id="eventDate"
-      value={props.eventName}
+      value={props.eventDate}
       onChange={props.handleChange}
     />
   )

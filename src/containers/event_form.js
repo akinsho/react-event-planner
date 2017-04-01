@@ -32,9 +32,16 @@ class EventsForm extends Component {
 
   handleEventSubmit(e) {
     e.preventDefault();
-    // console.log();
+    if (!this.state.eventName || !this.state.eventDate) {
+      return;
+    }
+    
     this.props.addEvent({name:this.state.eventName,date:this.state.eventDate});
 
+    this.setState({
+      eventName: '',
+      eventDate: ''
+    });
   }
 
   render() {
