@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import uuid from 'uuid';
 import daysInCurrentMonth from '../lib/date_helpers.js';
-// import { EventItem } from '../components/event_item.js';
-// import uuid from 'uuid';
+import { EventItem } from '../components/event_item.js';
 
 const Table = styled.table`
   border: solid 1px tomato;
@@ -64,7 +63,7 @@ class Calender extends Component {
                       {dayOfMonth > daysInCurrentMonth ? null : dayOfMonth}
                       {!eventsToday[0]?
                         null:
-                        <ul>{ eventsToday.map(event => <li key={uuid()}>{event.name}</li>) }</ul>
+                        <ul>{ eventsToday.map(event => <EventItem key={uuid()}>{event.name}</EventItem>) }</ul>
                       }
                     </Td>
                   );
