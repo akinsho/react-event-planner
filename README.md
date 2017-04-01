@@ -1,1 +1,2 @@
-###Akin and Piotr"s React Event Planner
+Akin and Piotr's React Event Planner
+====
