@@ -35,9 +35,8 @@ class Calender extends Component {
   // {this.props.events.map(event => (
   //   <EventItem key={uuid()} {...event}/>
   // ))}
-
   render() {
-    // console.log(daysInCurrentMonth);
+    console.log(this.props.events);
     const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     const numberOfWeeks = [0, 1, 2, 3, 4];
     return (
@@ -55,19 +54,25 @@ class Calender extends Component {
             <Tr key={uuid()}>
               {
                 daysOfWeek.map((day, dayIdx) => {
-                let dayOfMonth = (dayIdx + 1) + weekIdx * 7;
-                return (
-                  <Td key={uuid()}>
-                    {dayOfMonth > daysInCurrentMonth ? null : dayOfMonth}
-                  </Td>
-                );
+
+                  let dayOfMonth = (dayIdx + 1) + weekIdx * 7;
+                  let eventsToday = this.props.events.filter(event => {
+                    return Number(event.date.slice(-2)) === dayOfMonth;                    
+                  });
+                  return (
+                    <Td key={uuid()}>
+                      {dayOfMonth > daysInCurrentMonth ? null : dayOfMonth}
+                      {!eventsToday[0]?
+                        null:
+                        <ul>{ eventsToday.map(event => <li key={uuid()}>{event.name}</li>) }</ul>
+                      }
+                    </Td>
+                  );
                 })
               }
             </Tr>
           ))}
-
         </Tbody>
-
       </Table>
     );
   }
