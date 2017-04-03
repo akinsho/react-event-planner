@@ -6,27 +6,34 @@ import daysInCurrentMonth from '../lib/date_helpers.js';
 import { EventItem } from '../components/event_item.js';
 
 const Table = styled.table`
-  border: solid 1px tomato;
+  margin-top: 1rem;
+  width: 80vw;
+  height: auto;
 `;
 
 const Thead = styled.thead`
-  border: solid 1px tomato;
+  background:hsl(206, 100%, 31%);
 `;
 
 const Tbody = styled.tbody`
   border: solid 1px tomato;
 `;
 
+// border: solid 1px tomato;
 const Tr = styled.tr`
-  border: solid 1px tomato;
 `;
 
 const Th = styled.th`
-  border: solid 1px tomato;
 `;
 
 const Td = styled.td`
-  border: solid 1px tomato;
+  padding: 1rem;
+  background:hsla(200, 5%, 76%, 0.4);
+  box-shadow: 0 1px 2px black;
+`;
+
+const Ul = styled.ul`
+  list-style-type: none;
 `;
 
 class Calender extends Component {
@@ -63,7 +70,7 @@ class Calender extends Component {
                       {dayOfMonth > daysInCurrentMonth ? null : dayOfMonth}
                       {!eventsToday[0]?
                         null:
-                        <ul>{ eventsToday.map(event => <EventItem key={uuid()}>{event.name}</EventItem>) }</ul>
+                        <Ul>{ eventsToday.map(event => <EventItem key={uuid()}>{event.name}</EventItem>) }</Ul>
                       }
                     </Td>
                   );

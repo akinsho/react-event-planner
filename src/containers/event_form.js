@@ -9,7 +9,15 @@ import Button from '../components/button.js';
 import * as actions from '../actions/index.js';
 
 const Form = styled.form`
-border: solid 1px black;
+  border: solid 1px black;
+  background: hsl(206, 100%, 31%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 4em;
+  width: 100%;
+  margin: 0;
 `;
 
 // console.log(addEvent);
