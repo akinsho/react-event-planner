@@ -1,11 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Input = styled.input`
-  width: 60%;
-  background: grey;
-  height: 2em;
-`;
+
+import styled from 'styled-components';
+import Input from './input.js';
+
 const EventDateInput = (props) => {
   return (
     <Input
@@ -14,7 +12,7 @@ const EventDateInput = (props) => {
       value={props.eventDate}
       onChange={props.handleChange}
     />
-  )
+  );
 };
 
 export default EventDateInput;

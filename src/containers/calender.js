@@ -9,10 +9,11 @@ const Table = styled.table`
   margin-top: 1rem;
   width: 80vw;
   height: auto;
+  box-shadow: 0 1px 2px black;
 `;
 
 const Thead = styled.thead`
-  background:hsl(206, 100%, 31%);
+  background:#009688;
 `;
 
 const Tbody = styled.tbody`
@@ -29,7 +30,6 @@ const Th = styled.th`
 const Td = styled.td`
   padding: 1rem;
   background:hsla(200, 5%, 76%, 0.4);
-  box-shadow: 0 1px 2px black;
 `;
 
 const Ul = styled.ul`
@@ -63,7 +63,7 @@ class Calender extends Component {
 
                   let dayOfMonth = (dayIdx + 1) + weekIdx * 7;
                   let eventsToday = this.props.events.filter(event => {
-                    return Number(event.date.slice(-2)) === dayOfMonth;                    
+                    return Number(event.date.slice(-2)) === dayOfMonth;
                   });
                   return (
                     <Td key={uuid()}>
