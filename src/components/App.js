@@ -6,11 +6,11 @@ import Calendar from '../containers/calender.js';
 
 
 const Wrapper = styled.div`
-  font-family: 'Helvitica', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background:hsla(200, 5%, 76%, 0.4);
 `;
 const App = () => (
   <Wrapper>

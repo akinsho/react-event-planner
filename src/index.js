@@ -9,9 +9,11 @@ import styled, {injectGlobal} from 'styled-components';
 import App from './components/app.js';
 
 injectGlobal`
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 html {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 body {
   margin: 0;
@@ -24,8 +26,8 @@ body {
 
 
 const Wrapper = styled.div`
-height: 100%;
-border: solid 1px green;
+  height: 100%;
+  border: solid 1px green;
 `;
 
 /* eslint-disable no-underscore-dangle */

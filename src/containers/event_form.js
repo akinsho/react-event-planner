@@ -8,23 +8,18 @@ import EventDateInput from '../components/event_date_input.js';
 import Button from '../components/button.js';
 import * as actions from '../actions/index.js';
 
-// background: hsl(206, 100%, 31%);
-// border: solid 1px black;
 const Form = styled.form`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 2em;
+  height: 10%;
   width: 100%;
   margin: 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   background-color: rgb(0, 150, 136);
   box-shadow: 0px 1px 2px grey;
 `;
 
-// console.log(addEvent);
 class EventsForm extends Component {
   constructor(props) {
     super(props);
@@ -57,12 +52,12 @@ class EventsForm extends Component {
   }
 
   render() {
-    // console.log('this.props =====',this.props.addEvent);
     return (
       <Form onSubmit={this.handleEventSubmit}>
         <EventNameInput
           eventName={this.state.eventName}
           handleChange={this.handleEventInput}
+          placeholder='What are your plans?'
         />
         <EventDateInput
           eventDate={this.state.eventDate}

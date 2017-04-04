@@ -9,18 +9,19 @@ const Table = styled.table`
   margin-top: 1rem;
   width: 80vw;
   height: auto;
+  border-collapse:collapse;
   box-shadow: 0 1px 2px black;
 `;
 
 const Thead = styled.thead`
   background:#009688;
+  font-family:'Montserrat', sans-serif;
 `;
 
 const Tbody = styled.tbody`
   border: solid 1px tomato;
 `;
 
-// border: solid 1px tomato;
 const Tr = styled.tr`
 `;
 
@@ -28,19 +29,25 @@ const Th = styled.th`
 `;
 
 const Td = styled.td`
+  background: white;
+  font-family:'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  border: 0.3px solid rgba(0,0,0,0.1);
   padding: 1rem;
-  background:hsla(200, 5%, 76%, 0.4);
+  text-align:center;
 `;
 
 const Ul = styled.ul`
+  width: 100%;
+  heigh: 80%;
+  box-shadow: 0px 1px 2px grey;
   list-style-type: none;
+  padding: 0;
+  border: 0.1px solid black;
 `;
 
 class Calender extends Component {
 
-  // {this.props.events.map(event => (
-  //   <EventItem key={uuid()} {...event}/>
-  // ))}
   render() {
     console.log(this.props.events);
     const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -70,7 +77,7 @@ class Calender extends Component {
                       {dayOfMonth > daysInCurrentMonth ? null : dayOfMonth}
                       {!eventsToday[0]?
                         null:
-                        <Ul>{ eventsToday.map(event => <EventItem key={uuid()}>{event.name}</EventItem>) }</Ul>
+                        <Ul>Events: { eventsToday.map(event => <EventItem key={uuid()}>{event.name}</EventItem>) }</Ul>
                       }
                     </Td>
                   );

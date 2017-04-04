@@ -1,6 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
 
+const Li = styled.li`
+  font-size: 1rem;
+`;
 export const EventItem = (props) => (
-  <li>{props.children}</li>
+  <Li>{props.children}</Li>
 );
