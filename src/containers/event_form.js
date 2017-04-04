@@ -57,7 +57,6 @@ class EventsForm extends Component {
         <EventNameInput
           eventName={this.state.eventName}
           handleChange={this.handleEventInput}
-          placeholder='What are your plans?'
         />
         <EventDateInput
           eventDate={this.state.eventDate}

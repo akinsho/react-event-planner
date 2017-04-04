@@ -8,8 +8,9 @@ const EventNameInput = (props) => {
       id="eventName"
       value={props.eventName}
       onChange={props.handleChange}
+      placeholder="What are your plans?"
     />
-  )
+  );
 };
 
 export default EventNameInput;
